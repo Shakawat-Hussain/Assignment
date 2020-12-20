@@ -220,6 +220,7 @@
             this.Name = "Manage";
             this.Text = "Manage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Manage_FormClosing);
+            this.Load += new System.EventHandler(this.Manage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

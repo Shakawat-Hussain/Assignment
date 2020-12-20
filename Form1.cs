@@ -17,8 +17,7 @@ namespace CloudDiary
     public partial class Form1 : Form
     {
        public static string UseridText;
-        public static string mac;
-        string sec = "502B73C847C5";
+       
         public Form1()
         {
             InitializeComponent();
@@ -114,28 +113,16 @@ namespace CloudDiary
                 else
                 {
 
-                    MessageBox.Show("Login successfull");
-
-                    if (textBox1.Text == "shakawat")//Admin panel
-                    {
-                        Admin ad = new Admin();
+                    
                         this.Hide();
-                        ad.Show();
-                        reader.Close();
-                        c.Close();
-
-                    }
-                    else
-                    {
-                        this.Hide();
-                        //regular user
+                        
                         Form1.UseridText = textBox1.Text;
                         MyEvents m = new MyEvents();
-                        //m.ShowDialog()
+                        
                         m.Show();
                         reader.Close();
                         c.Close();
-                    }
+                    
                 }
             }
             
